@@ -20,7 +20,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register(){
-    this.authService.register(this.registerForm.value)
+    console.log('vliza');
+    this.authService.register(this.registerForm.value).subscribe(data => {
+      console.log(data)
+    });
   }
 
   
